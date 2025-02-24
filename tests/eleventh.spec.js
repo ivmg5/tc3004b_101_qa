@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
 const assert = require('assert');
 const fs = require('fs');
 
-describe('-1+1', function () {
+describe('1 - -2 Test', function () {
     this.timeout(30000);
     let driver;
     let vars;
@@ -32,19 +32,22 @@ describe('-1+1', function () {
         }
     });
 
-    it('-1+1', async function () {
-        await driver.get("http://127.0.0.1:8000/index.html")
+    it('1 - -2 should return 3', async function () {
+        await driver.get("http://127.0.0.1:8000/index.html");
         await driver.manage().window().setRect({ width: 720, height: 900 });
 
         await driver.findElement(By.id("num1")).click();
-        await driver.findElement(By.id("num1")).sendKeys("-1");
+        await driver.findElement(By.id("num1")).sendKeys("1");
 
         await driver.findElement(By.id("num2")).click();
-        await driver.findElement(By.id("num2")).sendKeys("1");
+        await driver.findElement(By.id("num2")).sendKeys("-2");
 
-        await driver.findElement(By.css("button:nth-child(1)")).click();
+        await driver.findElement(By.xpath("//button[text()='-']")).click();
 
-        const filename = 'test2';
+        let resultText = await driver.findElement(By.id("result")).getText();
+        assert.strictEqual(resultText, "Result: 3");
+
+        const filename = 'test13';
         const encodedString = await driver.takeScreenshot();
         await fs.writeFileSync(`./screenshots/${filename}.png`, encodedString, 'base64');
     });
