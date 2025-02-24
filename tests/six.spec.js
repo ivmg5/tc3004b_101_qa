@@ -33,7 +33,7 @@ describe('_+1', function () {
     });
 
     it('_+1', async function () {
-        await driver.get("http://127.0.0.1:8000/src/index.html");
+        await driver.get("http://127.0.0.1:8000/index.html")
         await driver.manage().window().setRect({ width: 720, height: 900 });
 
         await driver.findElement(By.id("num2")).click();
