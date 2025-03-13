@@ -1,0 +1,120 @@
+{
+	"id": "5a974f2e-9e92-4c7c-a5e1-78b08c4e0513",
+	"name": "Calculator",
+	"timestamp": "2025-03-13T13:59:06.778Z",
+	"collection_id": "34924526-cb9a8094-94b7-4e9f-a59a-6a5a87f8a07e",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-03-13T13:59:06.553Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "c2a54e4c-442b-472f-8951-8cf74f812a0b",
+			"name": "Add",
+			"url": "http://localhost:8080/add?num1=10&num2=3",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Content-Type header is application/json": true,
+				"Result is the correct sub of num1 and num2": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Result is the correct sub of num1 and num2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Content-Type header is application/json": true,
+					"Result is the correct sub of num1 and num2": true
+				}
+			]
+		},
+		{
+			"id": "ecd2e53f-685c-41cf-8e52-0092fec93b0b",
+			"name": "Sub",
+			"url": "http://localhost:8080/sub?num1=10&num2=3",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Content-Type header is application/json": true,
+				"Result is the correct sum of num1 and num2": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Result is the correct sum of num1 and num2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Content-Type header is application/json": true,
+					"Result is the correct sum of num1 and num2": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 22,
+	"collection": {
+		"requests": [
+			{
+				"id": "c2a54e4c-442b-472f-8951-8cf74f812a0b",
+				"method": "GET"
+			},
+			{
+				"id": "ecd2e53f-685c-41cf-8e52-0092fec93b0b",
+				"method": "GET"
+			}
+		]
+	}
+}
