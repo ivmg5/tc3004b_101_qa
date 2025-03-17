@@ -43,6 +43,7 @@ describe('-1 - -1 Test', function () {
         await driver.findElement(By.id("num2")).sendKeys("-1");
 
         await driver.findElement(By.xpath("//button[text()='-']")).click();
+        await driver.sleep(500);
 
         let resultText = await driver.findElement(By.id("result")).getText();
         assert.strictEqual(resultText, "Result: 0");
