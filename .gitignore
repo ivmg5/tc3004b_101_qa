@@ -1,1 +1,50 @@
+# --- 🔹 Node.js (Frontend) ---
 node_modules/
+frontend/node_modules/
+
+# --- 🔹 Java/Spring Boot (Backend) ---
+backend/HELP.md
+backend/target/
+!backend/.mvn/wrapper/maven-wrapper.jar
+!backend/**/src/main/**/target/
+!backend/**/src/test/**/target/
+
+# --- 🔹 Configuraciones de IDEs ---
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# --- 🔹 Eclipse / Spring Tool Suite (STS) ---
+backend/.apt_generated
+backend/.classpath
+backend/.factorypath
+backend/.project
+backend/.settings/
+backend/.springBeans/
+backend/.sts4-cache/
+
+# --- 🔹 NetBeans ---
+backend/nbproject/private/
+backend/nbbuild/
+backend/dist/
+backend/nbdist/
+backend/.nb-gradle/
+backend/build/
+!backend/**/src/main/**/build/
+!backend/**/src/test/**/build/
+
+# --- 🔹 VS Code ---
+.vscode/
+
+# --- 🔹 Archivos de sistema (Mac/Windows) ---
+.DS_Store
+Thumbs.db
+
+# --- 🔹 Archivos de configuración y caché de IntelliJ ---
+/shelf/
+/workspace.xml
+/httpRequests/
+/dataSources/
+/dataSources.local.xml

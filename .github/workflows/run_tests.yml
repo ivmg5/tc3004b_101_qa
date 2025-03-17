@@ -22,14 +22,14 @@ jobs:
           chrome-version: 120
           install-dependencies: true
       - run: |
-            cd src
+            cd frontend/src
             python3 -m http.server 8000 &
             sleep 10 &&
             curl http://localhost:8000
             cd ..
-            cd tests
             npm install
-            ./node_modules/.bin/mocha *.js
+            cd tests
+            ../node_modules/.bin/mocha *.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
