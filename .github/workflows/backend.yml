@@ -71,4 +71,4 @@ jobs:
         if: always()
         with:
           name: screenshots
-          path: screenshots/.
+          path: screenshots/
