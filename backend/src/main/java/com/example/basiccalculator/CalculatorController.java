@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalculatorController {
 
     @GetMapping("/add")
-    public CalculationResult add(@RequestParam(value = "num1") double num1,
-                                 @RequestParam(value = "num2") double num2) {
+    public CalculationResult add(@RequestParam(value = "num1", defaultValue = "0.0") double num1,
+                                 @RequestParam(value = "num2", defaultValue = "0.0") double num2) {
         return new CalculationResult(num1 + num2);
     }
 
     @GetMapping("/sub")
-    public CalculationResult subtract(@RequestParam(value = "num1") double num1,
-                                      @RequestParam(value = "num2") double num2) {
+    public CalculationResult subtract(@RequestParam(value = "num1", defaultValue = "0.0") double num1,
+                                      @RequestParam(value = "num2", defaultValue = "0.0") double num2) {
         return new CalculationResult(num1 - num2);
     }
 }

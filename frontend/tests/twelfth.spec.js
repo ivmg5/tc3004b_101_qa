@@ -44,10 +44,11 @@ describe('1 - 1 Test', function () {
 
         await driver.findElement(By.xpath("//button[text()='-']")).click();
 
+        await driver.wait(until.elementTextContains(driver.findElement(By.id("result")), "0"), 3000);
         let resultText = await driver.findElement(By.id("result")).getText();
         assert.strictEqual(resultText, "Result: 0");
 
-        const filename = 'test14';
+        const filename = 'test12';
         const encodedString = await driver.takeScreenshot();
         await fs.writeFileSync(`./screenshots/${filename}.png`, encodedString, 'base64');
     });

@@ -44,6 +44,7 @@ describe('-1 + 2 Test', function () {
 
         await driver.findElement(By.xpath("//button[text()='+']")).click();
 
+        await driver.wait(until.elementTextContains(driver.findElement(By.id("result")), "1"), 3000);
         let resultText = await driver.findElement(By.id("result")).getText();
         assert.strictEqual(resultText, "Result: 1");
 
