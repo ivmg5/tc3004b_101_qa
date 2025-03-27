@@ -32,7 +32,7 @@ describe('Blank + 1 Test', function () {
         }
     });
 
-    it('Blank + 1 should return NaN', async function () {
+    it('Blank + 1 should return 1', async function () {
         await driver.get("http://127.0.0.1:8000/index.html");
         await driver.manage().window().setRect({ width: 720, height: 900 });
 
@@ -41,6 +41,7 @@ describe('Blank + 1 Test', function () {
 
         await driver.findElement(By.xpath("//button[text()='+']")).click();
 
+        await driver.wait(until.elementTextContains(driver.findElement(By.id("result")), "1"), 3000);
         let resultText = await driver.findElement(By.id("result")).getText();
         assert.strictEqual(resultText, "Result: 1");
 
